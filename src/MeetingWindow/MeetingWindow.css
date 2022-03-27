@@ -50,4 +50,5 @@ html {
 }
 .meetingwindow__meetscreen__error {
     margin: auto;
+    text-align: center;
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { inject, observer } from 'mobx-react';
-// import MeetingWindowStore from "../stores/MeetingWindowStore";
 import './Home.css'
 import JoinComponentCard from "../components/JoinComponentCard";
 import NurseLogo from '../static/nurse.png'
@@ -42,7 +41,7 @@ const Home = observer((props) => {
                     <JoinComponentCard
                         image={NurseLogo}
                         role="NURSE"
-                        ctaText="JOIN"
+                        ctaText="Join"
                         handleClick={() => {
                             props.navigation("/meetingWindow");
                         }}
@@ -50,13 +49,13 @@ const Home = observer((props) => {
                     <JoinComponentCard
                         image={DoctorLogo}
                         role="DOCTOR"
-                        ctaText="MONITOR"
+                        ctaText="Monitor"
                         handleClick={() => props.navigation("/monitor")}
                     />
                     <JoinComponentCard
                         image={FamilyLogo}
                         role="FAMILY"
-                        ctaText="JOIN"
+                        ctaText="Join"
                         handleClick={() => {
                             props.navigation("/meetingWindow");
                         }}

@@ -97,7 +97,8 @@ const MeetingWindow = observer ((props) => {
                     />
                 ) : (
                     <div className="meetingwindow__meetscreen__error">
-                        <h1>Patient Monitoring Not Initiated</h1>
+                        <h1>Please wait ...</h1>
+                        <h1>Patient monitoring not initiated</h1>
                     </div>
                 )}
                 

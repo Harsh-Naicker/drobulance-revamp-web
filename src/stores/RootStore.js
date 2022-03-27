@@ -25,7 +25,7 @@ class RootStore {
             textPrimary: "#FFFFFF",
             videoBackground: "#FFFFFF"
         },
-        logo: 'https://i.ibb.co/6tQyq8F/logo-1.png'
+        logo: 'https://i.ibb.co/0Gh2ZTW/logo-new.png'
     }
 
     constructor() {
