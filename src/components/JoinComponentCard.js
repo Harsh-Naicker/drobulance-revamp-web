@@ -1,18 +1,16 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
+import React from "react";
 import { observer } from 'mobx-react';
-import RootStore from "../stores/RootStore";
 import './JoinComponentCard.css'
 
-const JoinComponentCard = observer(({image=null, role=null, ctaText=null, meetLink=null, handleClick}) => {
+const JoinComponentCard = observer((props) => {
     return (
         <div className="card__wrapper">
-            <img src={image} alt=""/>
+            <img src={props.image} alt=""/>
             <div className="card__text">
-                {role}
+                {props.role}
             </div>
-            <div className="card__cta" onClick={handleClick}>
-                {ctaText}
+            <div className="card__cta" onClick={props.handleClick}>
+                {props.ctaText}
             </div>
         </div>
     )

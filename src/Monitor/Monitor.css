@@ -1,0 +1,105 @@
+html {
+    scroll-behavior: smooth;
+}
+.monitorpatient {
+
+}
+.monitorpatient__banner {
+    background: linear-gradient(rgba(33, 106, 93, 0.9),rgba(1, 16, 13, 0.5) ), url('../static/banner.jpg');
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.monitorpatient__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px
+}
+.monitorpatient__nav__header {
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
+.monitorpatient__nav__tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.monitorpatient__nav__tabitem {
+    cursor: pointer;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.monitorpatient__nav__tabitem a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
+.monitorpatient__nav__tabitem:hover {
+    background-color: #89d9ca;
+    color: black;
+    border-radius: 4px;
+}
+.monitorpatient__page {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+.monitorpatient__page__healthparams {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    padding: 20px;
+    align-items: center;
+    height: calc(100vh - 135px);
+    overflow-y: auto;
+}
+.monitorpatient__page__healthparams__header {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.monitorpatient__page__videocall {
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    padding: 20px;
+    align-items: center;
+}
+.monitorpatient__page__videocall__form {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.monitorpatient__page__videocall__form__header {
+    font-size: 36px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.monitorpatient__page__videocall__form input {
+    height: 70px;
+    width: 385px;
+    padding: 10px !important;
+    font-size: 30px;
+    font-weight: 400;
+}
+.monitorpatient__page__videocall__form__cta {
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+    width: 250px;
+    background-color:#11483E;
+    color: white;
+    font-size: 36px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

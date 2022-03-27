@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+}
+.meetingwindow {
+
+}
+.meetingwindow__banner {
+    background: linear-gradient(rgba(33, 106, 93, 0.9),rgba(1, 16, 13, 0.5) ), url('../static/banner.jpg');
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.meetingwindow__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px
+}
+.meetingwindow__nav__header {
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+}
+.meetingwindow__nav__tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.meetingwindow__nav__tabitem {
+    cursor: pointer;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.meetingwindow__nav__tabitem a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+}
+.meetingwindow__nav__tabitem:hover {
+    background-color: #89d9ca;
+    color: black;
+    border-radius: 4px;
+}
+.meetingwindow__meetscreen {
+    height: calc(100vh - 135px);
+    display: flex;
+}
+.meetingwindow__meetscreen__error {
+    margin: auto;
+}

@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
-import { observer } from 'mobx-react';
-import RootStore from "../stores/RootStore";
+import React from "react";
+import { inject, observer } from 'mobx-react';
+// import MeetingWindowStore from "../stores/MeetingWindowStore";
 import './Home.css'
 import JoinComponentCard from "../components/JoinComponentCard";
 import NurseLogo from '../static/nurse.png'
@@ -18,7 +17,7 @@ import GauravImg from '../static/Gaurav.png'
 import KailashImg from '../static/Kailash.png'
 import SimratImg from '../static/Simrat.png'
 
-const Home = observer(() => {
+const Home = observer((props) => {
     return (
         <div className="homewrapper">
             <div className="homewrapper__banner">
@@ -44,16 +43,23 @@ const Home = observer(() => {
                         image={NurseLogo}
                         role="NURSE"
                         ctaText="JOIN"
+                        handleClick={() => {
+                            props.navigation("/meetingWindow");
+                        }}
                     />
                     <JoinComponentCard
                         image={DoctorLogo}
                         role="DOCTOR"
                         ctaText="MONITOR"
+                        handleClick={() => props.navigation("/monitor")}
                     />
                     <JoinComponentCard
                         image={FamilyLogo}
                         role="FAMILY"
                         ctaText="JOIN"
+                        handleClick={() => {
+                            props.navigation("/meetingWindow");
+                        }}
                     />
                 </div>
             </div>
@@ -166,4 +172,4 @@ const Home = observer(() => {
     )
 })
 
-export default Home;
+export default inject("RootStore")(Home);

@@ -1,27 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Home from "./Home/Home";
 import Monitor from "./Monitor/Monitor";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Provider } from "mobx-react";
-import RootStore from "./stores/RootStore";
+import MeetingWindow from "./MeetingWindow/MeetingWindow"
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 
 function App() {
+  useEffect(() => {
+    document.title="Drobulance";
+  }, [])
+  let navigation = useNavigate();
   return (
     <React.Fragment>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route
-                path="/simple-dyte-client/meeting/:room/:id"
-                component={MeetingComponent}
-              />
-              <Route
-                path="/custom-layout-button/meeting/:room/:id"
-                component={CustomLayoutButton}
-              /> */}
-        </Routes>
-
-      </Router>
+      <Routes>
+        <Route path="/" element={<Home navigation={navigation} />} />
+        <Route path="/monitor" element={<Monitor navigation={navigation} />} />
+        <Route path="/meetingWindow" element={<MeetingWindow navigation={navigation} />} />
+      </Routes>
     </React.Fragment>
   );
 }

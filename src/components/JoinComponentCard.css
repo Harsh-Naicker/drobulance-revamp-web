@@ -20,6 +20,7 @@
     margin-bottom: 10px;
 }
 .card__cta {
+    cursor: pointer;
     width: 200px;
     height: 80px;
     background-color: black;
